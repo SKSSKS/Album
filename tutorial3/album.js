@@ -1,0 +1,52 @@
+function AlbumCtrl($scope)
+{
+    $scope.images = ["suraj","chanchal"];
+
+    $scope.images = 
+    [
+        {category:"one",image:"/ANGULAR_JS/img/bunny1.jpg",thumbnail:"/ANGULAR_JS/img/bunny1th.jpg",description:"A brown rabbit"},
+        {category:"two",image:"/ANGULAR_JS/img/bunny2.jpg",thumbnail:"/ANGULAR_JS/img/bunny2th.jpg",description:"A white rabbit"},
+        {category:"three",image:"/ANGULAR_JS/img/bunny3.jpg",thumbnail:"/ANGULAR_JS/img/bunny3th.jpg",description:"A black rabbit"},
+        {category:"one",image:"/ANGULAR_JS/img/bunny4.jpg",thumbnail:"/ANGULAR_JS/img/bunny4th.jpg",description:"A cute rabbit"},
+        {category:"two",image:"/ANGULAR_JS/img/bunny5.jpg",thumbnail:"/ANGULAR_JS/img/bunny5th.jpg",description:"A white puffy rabbit"},
+        {category:"three",image:"/ANGULAR_JS/img/bunny6.jpg",thumbnail:"/ANGULAR_JS/img/bunny6th.jpg",description:"A white and black rabbit"},
+        {category:"one",image:"/ANGULAR_JS/img/bunny7.jpg",thumbnail:"/ANGULAR_JS/img/bunny7th.jpg",description:"A brown and white rabbit"}
+    ];
+
+    $scope.currentImage = _.first($scope.images);
+    $scope.imageCategories = _.uniq(_.pluck($scope.images,"category"));
+    $scope.setCurrentImage = function(image)
+    {
+        $scope.currentImage = image;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

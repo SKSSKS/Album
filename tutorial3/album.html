@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" ng-app>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/BOOTSTRAP/bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div ng-controller="AlbumCtrl">
+
+        <div id="header">
+            <h2>{{currentImage.description}}</h2>
+
+            <select ng-model="categories" ng-options="category for category in imageCategories">
+                <option value="">All</option>
+            </select>
+        </div>
+        <div id="albumImage">
+            <img id="image" src="{{currentImage.image}}" alt="{{currentImage.description}}">
+        </div>
+    
+        <div id="thumbWrapper">
+            <ul id="thumbList">
+                <li ng-repeat="image in images | filter:categories" ng-click="setCurrentImage(image)">            
+                    <img id="thumb" ng-src="{{image.thumbnail}}" alt="{{image.description}}">
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <script src="/ANGULAR_JS/angularJs/angular-1.0.0rc4.min.js"></script>
+    <script src="/ANGULAR_JS/angularJs/underscore-min.js"></script>
+    <script src="album1.js"></script>
+</body>
+</html>
